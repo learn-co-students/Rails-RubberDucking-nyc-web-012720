@@ -2,6 +2,9 @@
 
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+    <li> <%= link_to duck.name, duck %> </li>
   <% end %>
 </ul>
+
+<h5><%=  link_to  "Create a New Duck", new_duck_path %></h5>
+<h5><%= link_to  "Students", students_path %></h5>
