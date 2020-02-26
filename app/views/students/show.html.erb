@@ -1,0 +1,7 @@
+<h1>Name: <%= @student.name %> Mod: <%= @student.mod %></h1>
+<%= button_to "Destroy", @student, method: :delete %>
+
+<h2><% @student.ducks.each do |d| %>
+Duck Name: <%= link_to d.name, d %><br>
+Duck Description: <%= d.description %><br>
+<% end %></h2>

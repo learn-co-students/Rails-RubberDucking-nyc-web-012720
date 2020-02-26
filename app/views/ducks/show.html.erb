@@ -1,0 +1,7 @@
+<h1>Name: <%= @duck.name %><br> 
+Mod: <%= @duck.description %><br>
+Student ID: <%= @duck.student_id %><br>
+Student Name: <%=link_to @duck.student_name, student_path(@duck.student) %>
+</h1>
+<%= link_to "Back to All Ducks", ducks_path %>
+<%= button_to "Destroy", @duck, method: :delete %>
