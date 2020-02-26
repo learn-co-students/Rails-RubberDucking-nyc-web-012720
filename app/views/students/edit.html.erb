@@ -1,0 +1,15 @@
+<% if flash[:errors] %>
+<div> The following errors have occurred: </div>
+<ul>
+    <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+    <% end %>
+<% end %>
+</ul>
+<h1> Edit Student Info </h1>
+
+<%= form_for @student do |f| %>
+    <p>Student Name:<%= f.text_field :name %></p>
+    <p>Module:<%= f.text_field :mod %></p>
+            <%= f.submit %>
+<% end %>
