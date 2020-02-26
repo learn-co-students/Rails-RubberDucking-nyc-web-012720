@@ -1,0 +1,6 @@
+<h1>Edit Yo Duckie</h1>
+<%= form_for @duck do |f| %>
+<p>Duck Name: <%= f.text_field :name %>
+<p> Describe that duck: <%= f.text_area :description %>
+<%= f.submit "Change its life"%>
+<% end %>
