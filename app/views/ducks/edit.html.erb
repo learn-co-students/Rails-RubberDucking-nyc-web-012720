@@ -1,0 +1,22 @@
+<% if flash[:errors] %>
+<div> The following errors have occurred: </div>
+<ul>
+    <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+    <% end %>
+<% end %>
+</ul>
+<h1> Edit Duck </h1>
+
+<%= form_for @duck do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :student_name %>
+<%= f.collection_select :student_name, Student.all, :name, :name %>
+
+<%= f.submit %>
+<% end %>

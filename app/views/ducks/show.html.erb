@@ -1,0 +1,7 @@
+<h1 style="color: teal"><%= @duck.name%></h1>
+<p>Description: <%= @duck.description%></p>
+<p>Owner: <%= link_to @duck.student.name, @duck.student %></p>
+
+<% link_to @duck %>
+
+<%= button_to "Delete Duck", @duck, method: :delete %>
