@@ -1,0 +1,10 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+    <% end %>
+<% end %>
+<%= form_for @student do |f| %>
+    <p>Student Name: <%= f.text_field :name %></p>
+    <p>Module: <%= f.text_field :mod %></p>
+    <%= f.submit "Edit Student"%>
+<% end %>
